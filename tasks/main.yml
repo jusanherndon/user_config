@@ -5,7 +5,7 @@
     state: present
     password: "{{ password | string | password_hash('sha512') }}"
     shell: "{{ shell }}"
-    group: "{{ groups }}"
+    groups: "{{ user_groups }}"
 
 - name: Changing root settings
   user:
